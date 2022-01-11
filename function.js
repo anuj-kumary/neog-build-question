@@ -5,12 +5,12 @@
 
 // Solution:-1
 function powerV1(a, b) {
-  return Math.pow(a, b);
+  return a ** b;
 }
-console.log(powerV1(2, 3));
+console.log(powerV1(2, 4));
 
 //Solution:-2
-const power = (a, b) => Math.pow(a, b);
+const power = (a, b) => a ** b;
 power(2, 3);
 
 // Question:-2
@@ -60,3 +60,10 @@ const typeOfTriangle = (a, b, c) => {
   else console.log("Scalene Triangle");
 };
 typeOfTriangle(30, 60, 90);
+
+// Given an array, your function should return the length of the array.
+// Example:
+// Input: arrayLength([1,5,3,7,8]) ––> Output: 5
+
+const arrayLength = (arr) => arr.length;
+arrayLength([1, 2, 3, 4, 5]);
