@@ -36,9 +36,17 @@ noOfWords("We are neoGrammers");
 // Input: findMin(3,5) ––> Output: 3
 // Input: findMin(3,5,9,1) ––> Output: 1
 
-const findMin = (...args) => Math.min(...args);
-findMin(3, 5);
-findMin(3, 5, 9, 1);
+let arrayList = [1, 15, 5, 8, 6];
+const maxList = () => {
+  let max = arrayList[0];
+  for (let i = 1; i < arrayList.length; ++i) {
+    if (arrayList[i] > max) {
+      max = arrayList[i];
+    }
+  }
+  return max;
+};
+console.log(maxList(arrayList));
 
 //Question no:-5
 // Given n numbers, your function should return the maximum of them all. The number of parameters won't be accepted from user.
@@ -46,9 +54,17 @@ findMin(3, 5, 9, 1);
 // Input: findMax(3,5) ––> Output: 5
 // Input: findMax(3,5,9,1) ––> Output: 9
 
-const findMax = (...arg) => Math.max(...arg);
-findMax(3, 5);
-findMax(3, 5, 9, 1);
+let arr = [4, 1, 9, 5, 0];
+const minFind = () => {
+  let smallest = arr[0];
+  for (var i = 1; i < arr.length; i++) {
+    if (arr[i] < smallest) {
+      smallest = arr[i];
+    }
+  }
+  return smallest;
+};
+minFind(arr);
 
 //Question No:-6
 // Given three angles of a triange, your function should return if it is a scalene, isosceles, equilateral triangle or not a triangle at all. Example:
