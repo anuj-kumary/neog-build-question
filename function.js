@@ -83,3 +83,61 @@ typeOfTriangle(30, 60, 90);
 
 const arrayLength = (arr) => arr.length;
 arrayLength([1, 2, 3, 4, 5]);
+
+// Given an array and two numbers, your function should replace all entries of first number in an array with the second number.
+// Example:
+// Input: replace([1,5,3,5,6,8], 5, 10) ––> Output: [1,10,3,10,6,8]
+
+let replaceArr = [1, 5, 3, 4, 5];
+
+const arrReplace = (item, num1, num2) => {
+  for (let i = 0; i < item.length; i++) {
+    if (item[i] === num1) {
+      item[i] = num2;
+    }
+  }
+  return item;
+};
+console.log(arrReplace(replaceArr, 5, 1));
+
+// Given two arrays, your function should return single merged array.
+// Example:
+// Input: mergeArray([1,3,5], [2,4,6]) ––> Output: [1,3,5,2,4,6]
+
+const mergeArray = (arr1, arr2) => {
+  let newArray = arr1.concat(arr2);
+  return newArray;
+};
+console.log(mergeArray([1, 3, 5], [2, 4, 6]));
+
+// Given a string and an index, your function should return the character present at that index in the string.
+// Example:
+// Input: charAt("neoGcamp", 4) ––> Output: c
+
+const charArray = (text, num) => {
+  for (let i = 0; i < text.length; i++) {
+    if (i === 4) {
+      let str = text[i];
+      console.log(str);
+    }
+  }
+};
+charArray("neoGcamp", 4);
+
+// Given two dates, your function should return which one comes before the other.
+// Example:
+// Input: minDate('02/05/2021', '24/01/2021') ––> Output: 24/01/2021
+
+const minDate = (date1, date2) => {
+  const date1Parts = date1.split("/");
+  const date2Parts = date2.split("/");
+  const dateObj1 = new Date(date1Parts[2], date1Parts[1] - 1, date1Parts[0]);
+  const dateObj2 = new Date(date2Parts[2], date2Parts[1] - 1, date2Parts[0]);
+
+  if (dateObj1 < dateObj2) {
+    return date1;
+  }
+  return date2;
+};
+
+console.log(minDate("02/05/2021", "24/01/2021"));
