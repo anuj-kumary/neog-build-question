@@ -7,6 +7,7 @@
 function powerV1(a, b) {
   return a ** b;
 }
+
 console.log(powerV1(2, 4));
 
 //Solution:-2
@@ -46,6 +47,7 @@ const maxList = () => {
   }
   return max;
 };
+
 console.log(maxList(arrayList));
 
 //Question no:-5
@@ -98,6 +100,7 @@ const arrReplace = (item, num1, num2) => {
   }
   return item;
 };
+
 console.log(arrReplace(replaceArr, 5, 1));
 
 // Given two arrays, your function should return single merged array.
@@ -108,6 +111,7 @@ const mergeArray = (arr1, arr2) => {
   let newArray = arr1.concat(arr2);
   return newArray;
 };
+
 console.log(mergeArray([1, 3, 5], [2, 4, 6]));
 
 // Given a string and an index, your function should return the character present at that index in the string.
